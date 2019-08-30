@@ -153,3 +153,21 @@ body{
 #startButton:active {
 	cursor: pointer;
 }
+
+#stopHacking {
+	font: bold 60px 'Droid Sans', Arial, sans-serif;
+	color: #f47321;
+	text-shadow: 1px 1px 0px #000;
+	text-align: center;
+	text-transform: uppercase;
+	/* position */
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	/* marjor style */
+	display: none;
+}

@@ -20,6 +20,8 @@ function onStartButtonClick() {
 	var timeOutFucntion = setInterval(function () {
 		if (((target_date - new Date().getTime()) / 1000) <= 0) {
 			alert("Done")
+			document.getElementById("countdown").style.display = 'none';
+			document.getElementById("stopHacking").style.display = 'block';
 			clearTimeout(timeOutFucntion)
 		} else {
 			getCountdown();
