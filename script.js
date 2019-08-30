@@ -39,7 +39,11 @@ function getCountdownInit() {
 	minutes = pad(parseInt(seconds_left / 60));
 	seconds = pad(parseInt(seconds_left % 60));
 	// format countdown string + set tag value
-	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+	if (seconds_left <= 0) {
+		countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
+	} else {
+		countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+	}
 }
 
 //  updates the timer | called using recursion
