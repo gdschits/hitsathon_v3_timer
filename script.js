@@ -1,8 +1,8 @@
 const HOURS = 1 // default: 24
-const MINUTES = 1 // default: 60
+const MINUTES = 0.1 // default: 60
 var target_date, days, hours, minutes, seconds, countdown;
 
-window.onload = function() {
+window.onload = function () {
 	if (localStorage.getItem("timer") === null) {
 		target_date = new Date().getTime() + (1000 * MINUTES * 60 * HOURS); // initialize the time
 	} else {
@@ -17,7 +17,14 @@ window.onload = function() {
 // start the timer manually
 function onStartButtonClick() {
 	document.getElementById("startButton").style.display = 'none';
-	setInterval(function () { getCountdown(); }, 1000);
+	var timeOutFucntion = setInterval(function () {
+		if (((target_date - new Date().getTime()) / 1000) <= 0) {
+			alert("Done")
+			clearTimeout(timeOutFucntion)
+		} else {
+			getCountdown();
+		}
+	}, 1000);
 }
 
 // displays the initial values | called only once
