@@ -120,3 +120,36 @@ body{
 	text-transform: uppercase;
 	display: inline-block;
 }
+
+#startButton {
+	/* position */
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	/* the design */
+	background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
+	background-image:    -moz-linear-gradient(top, #222, #333, #333, #222);
+	background-image:     -ms-linear-gradient(top, #222, #333, #333, #222);
+	background-image:      -o-linear-gradient(top, #222, #333, #333, #222);
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #111;
+	padding: 15px 30px;
+	font: bold 15px 'Droid Sans', Arial, sans-serif;
+	color: #f47321;
+	text-shadow: 1px 1px 0px #000;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+	/* the position which might be customized */
+	margin-top: 150px; /* change this | incase something happens */
+}
+
+#startButton:hover,
+#startButton:focus,
+#startButton:active {
+	cursor: pointer;
+}
