@@ -1,5 +1,5 @@
-const HOURS = 1 // default: 24
-const MINUTES = 0.3 // default: 60
+const HOURS = 24 // default: 24
+const MINUTES = 60 // default: 60
 const countdown = document.getElementById("tiles"); // get tag element 
 var target_date, days, hours, minutes, seconds;
 
@@ -51,12 +51,7 @@ function getCountdown() {
 	seconds_left = seconds_left % 3600;
 	minutes = pad(parseInt(seconds_left / 60));
 	seconds = pad(parseInt(seconds_left % 60));
-	// format countdown string + set tag value
-	if (seconds_left <= 0) {
-		countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
-	} else {
-		countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
-	}
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
 }
 
 // helper function for displaying
